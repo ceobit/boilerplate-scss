@@ -30,10 +30,9 @@ module.exports = {
     }),
     new HTMLWebpackPlugin({
       inject: true,
-      template: './index.html',
-      filename: './index.html',
+      template: './assets/index.html',
       minify: {
-        collapseWhitespace: true //Минимифицируем index.html
+        collapseWhitespace: true
       }
     }),
   ],
