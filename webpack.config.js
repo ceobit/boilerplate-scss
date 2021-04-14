@@ -3,7 +3,8 @@ const miniCss = require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './assets/app.js',
+  context: path.resolve(__dirname, 'assets'),
+  entry: './app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -30,7 +31,7 @@ module.exports = {
     }),
     new HTMLWebpackPlugin({
       inject: true,
-      template: './assets/index.html',
+      template: 'index.html',
       minify: {
         collapseWhitespace: true
       }
