@@ -30,5 +30,8 @@ module.exports = {
         collapseWhitespace: true //Минимифицируем index.html
       }
     }),
-  ]
+  ],
+  devServer: {
+    port: 5490
+  }
 };
