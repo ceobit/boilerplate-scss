@@ -8,6 +8,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  devServer: {
+    historyApiFallback: true,
+    port: 3000,
+    hot: true,
+    open: true,
+  },
   module: {
     rules: [{
       test:/\.(s*)css$/,
@@ -31,7 +37,4 @@ module.exports = {
       }
     }),
   ],
-  devServer: {
-    port: 5490
-  }
 };
